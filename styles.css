@@ -1,0 +1,7 @@
+.yujaverity form[action*="/mod/quiz/startattempt.php"] {
+    visibility: collapse;
+}
+
+.yujaverity #region-main-box {
+    display: none;
+}
