@@ -22,7 +22,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace quizaccess_yujaverity\privacy;
+ namespace quizaccess_yujaverity\privacy;
 
 defined('MOODLE_INTERNAL') || die();
 
