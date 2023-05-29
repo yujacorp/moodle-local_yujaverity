@@ -27,7 +27,9 @@ defined('MOODLE_INTERNAL') || die();
 $observers = [
     [
         'eventname' => 'mod_quiz\event\course_module_viewed',
-        'callback' => 'quizaccess_yujaverity::course_module_viewed_handler',
+        'callback' => 'quizaccess_yujaverity\quizaccess_yujaverity::course_module_viewed_handler',
         'internal' => false
     ]
 ];
+
+

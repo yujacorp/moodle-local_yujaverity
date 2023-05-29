@@ -55,7 +55,6 @@ function showBlockPage(hostname, blockPage) {
             event: "init-auth-instructions",
             authLink: undefined
         }, "https://" + hostname);
-
     };
 
     window.addEventListener("message", (ev) => {
@@ -79,8 +78,15 @@ function showBlockPage(hostname, blockPage) {
     });
 }
 
-// course_module_viewed_handler in rule.php hides the form, so unhide it
+// Function to check if YuJa Verity is enabled for the quiz.
+function isYuJaVerityEnabled() {
+    // Modify this logic based on your plugin's implementation in rule.php.
+    // For example, you can use the presence of a specific CSS class to determine the enabled state.
+    return document.body.classList.contains("yujaverity");
+}
+
 function showQuiz() {
+    // course_module_viewed_handler in rule.php hides the form, so unhide it
     document.body.classList.remove("yujaverity");
 }
 
@@ -96,16 +102,15 @@ function isQuizProctored() {
 
 export async function checkQuizAccess(hostname) {
     try {
+        // Check if it is a take quiz page and if the quiz is proctored.
         if (isTakeQuizPage() && isQuizProctored()) {
-            if (window.chrome) {
-                if (await checkExtension(hostname)) {
-                    showQuiz();
-                }
-                else {
-                    showBlockPage(hostname, "download-instructions");
-                }
+            // Check if YuJa Verity is enabled.
+            if (isYuJaVerityEnabled()) {
+                // YuJa Verity is enabled. Proceed with the quiz.
+                showQuiz();
             } else {
-                showBlockPage(hostname, "browser-instructions");
+                // YuJa Verity is not enabled. Block access and show the corresponding page.
+                showBlockPage(hostname, "download-instructions");
             }
         }
     } catch (err) {
