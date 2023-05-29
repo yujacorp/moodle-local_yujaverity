@@ -30,4 +30,3 @@ $string['externalhostname'] = 'zone1.verity.yuja.com';
 
 $string['settings_enable'] = 'Block YuJa Verity Quizzes';
 $string['settings_enabledesc'] = 'Prevent users from accessing a YuJa Verity monitored quiz without the YuJa Verity extension';
-$string['privacy:metadata'] = 'The Yuja Verity Moodle plugin does not store any personal data.';
