@@ -14,20 +14,21 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/**
- * Implementation of the quizaccess_yujaverity plugin.
- *
- * @package   quizaccess_yujaverity
- * @copyright Copyright (c) 2022 YuJa Inc. (https://www.yuja.com/)
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-
-defined('MOODLE_INTERNAL') || die();
-
-$string["pluginname"] = "YuJa Verity";
-
-$string['externalhostname'] = 'zone1.verity.yuja.com';
-
-$string['settings_enable'] = 'Block YuJa Verity Quizzes';
-$string['settings_enabledesc'] = 'Prevent users from accessing a YuJa Verity monitored quiz without the YuJa Verity extension';
-$string['privacy:metadata'] = 'The Yuja Verity Moodle plugin does not store any personal data.';
+$services = array(
+    'quizaccess_yujaverity' => array(
+        'functions' => array(
+            'quizaccess_yujaverity_get_data' => array(
+                'classname'     => 'quizaccess_yujaverity_external',
+                'methodname'    => 'get_data',
+                'classpath'     => 'quizaccess/yujaverity/externallib.php',
+                'description'   => 'Get the data for the plugin',
+                'type'          => 'read',
+                'capabilities'  => 'quizaccess/yujaverity:view',
+            ),
+        ),
+    ),
+    'yuja-verity-moodle-plugin' => [
+        'privacy:metadata' => 'core_privacy\local\metadata\null_provider',
+    ],
+    
+);

@@ -31,6 +31,4 @@ $plugin->component = 'quizaccess_yujaverity';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = '1.0.3';
 $plugin->component = 'yuja-verity-moodle-plugin'; 
-$plugin->dependencies = array(
-    'privacy_provider' => 'yuja-verity-moodle-plugin'
-);
+
