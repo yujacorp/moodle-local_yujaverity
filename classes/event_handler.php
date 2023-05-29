@@ -36,18 +36,8 @@ public static function course_module_viewed_handler($event) {
 
         // Check if the quiz name contains specific letters indicating YuJa Verity monitoring.
         if (strpos($quiz->name, "(YuJa Verity") !== false) {
-            // YuJa Verity monitoring is enabled for this quiz.
-            // Your logic here to handle the enabled state.
-            // This could include setting a flag, updating UI, or triggering other actions.
-
-            // For example, you can set a flag in the session or user preferences.
             $_SESSION['yujaverity_enabled'] = true;
         } else {
-            // YuJa Verity monitoring is not enabled for this quiz.
-            // Your logic here to handle the disabled state.
-            // This could include displaying a message or performing alternative actions.
-
-            // For example, you can set a flag in the session or user preferences.
             $_SESSION['yujaverity_enabled'] = false;
         }
     }

@@ -80,8 +80,6 @@ function showBlockPage(hostname, blockPage) {
 
 // Function to check if YuJa Verity is enabled for the quiz.
 function isYuJaVerityEnabled() {
-    // Modify this logic based on your plugin's implementation in rule.php.
-    // For example, you can use the presence of a specific CSS class to determine the enabled state.
     return document.body.classList.contains("yujaverity");
 }
 
@@ -106,10 +104,10 @@ export async function checkQuizAccess(hostname) {
         if (isTakeQuizPage() && isQuizProctored()) {
             // Check if YuJa Verity is enabled.
             if (isYuJaVerityEnabled()) {
-                // YuJa Verity is enabled. Proceed with the quiz.
+                // YuJa Verity is enabled, so proceed with the quiz.
                 showQuiz();
             } else {
-                // YuJa Verity is not enabled. Block access and show the corresponding page.
+                // YuJa Verity is not enabled, so block access and show the corresponding page.
                 showBlockPage(hostname, "download-instructions");
             }
         }
