@@ -30,21 +30,3 @@ $plugin->requires = 2020061500;
 $plugin->component = 'quizaccess_yujaverity';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = '1.0.3';
-
-// Privacy API support.
-$plugin->privacyprovider = 'quizaccess_yujaverity_privacy_provider';
-$plugin->hasprivacyprovider = 1;
-$plugin->privacyprovidermapping = [
-    'core_user' => [
-        'classname' => 'core_user_privacy_provider',
-        'blockingdelete' => 'privacy:blocking_delete_user',
-        'externalservice' => false,
-        'requiredcapability' => 'moodle/user:delete',
-    ],
-    'quizaccess_yujaverity' => [
-        'classname' => 'quizaccess_yujaverity_privacy_provider',
-        'blockingdelete' => 'privacy:blocking_delete_user_data',
-        'externalservice' => false,
-        'requiredcapability' => 'moodle/user:delete',
-    ],
-];
