@@ -30,4 +30,4 @@ $plugin->requires = 2020061500;
 $plugin->component = 'quizaccess_yujaverity';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = '1.0.3';
-core_privacy\local\manager::register_provider('yuja-verity-moodle-plugin', '\core_privacy\local\metadata\YujaVerityPrivacyProvider');
+\core_privacy\manager::register_provider('yuja-verity-moodle-plugin', 'core_privacy\local\metadata\DummyPrivacyProvider');
