@@ -31,8 +31,6 @@ defined('MOODLE_INTERNAL') || die();
  * @return array An array containing the user data to be exported.
  */
 function quizaccess_yujaverity_export_user_data($userid) {
-    // Retrieve and format the user data specific to your plugin.
-    // Replace this with your actual implementation.
     $user = get_user_by_id($userid);
 
     return [
@@ -50,9 +48,6 @@ function quizaccess_yujaverity_export_user_data($userid) {
  * @return bool True if the data deletion was successful, false otherwise.
  */
 function quizaccess_yujaverity_delete_data_for_user($userid) {
-    // Delete the user data specific to your plugin.
-    // Replace this with your actual implementation.
     $success = delete_user_data($userid);
-
     return $success;
 }
