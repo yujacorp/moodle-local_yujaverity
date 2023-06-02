@@ -56,6 +56,7 @@ class verity_quiz {
      */
     public static function is_verity_enabled($quizid) {
         global $DB;
-        return get_config("local_yujaverity", "enabled") && $DB->record_exists('local_yujaverity_verityquiz', ['quiz_id' => $quizid]);
+        return get_config("local_yujaverity", "enabled") &&
+            $DB->record_exists('local_yujaverity_verityquiz', ['quiz_id' => $quizid]);
     }
 }
