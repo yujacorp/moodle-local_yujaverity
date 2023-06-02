@@ -32,6 +32,9 @@ use external_api;
 use context_module;
 use local_yujaverity\quiz\verity_quiz;
 
+/**
+ * Web service for delete_verityquiz
+ */
 class delete_verityquiz extends external_api {
     /**
      * Returns description of method parameters
@@ -53,17 +56,17 @@ class delete_verityquiz extends external_api {
 
     /**
      * Enable Verity for a quiz
-     * @param array $quiz_id quiz ID to enable it for
+     * @param array $quizid quiz ID to enable it for
      */
-    public static function execute($quiz_id) {
-        $params = self::validate_parameters(self::execute_parameters(), ['quiz_id' => $quiz_id]);
+    public static function execute($quizid) {
+        $params = self::validate_parameters(self::execute_parameters(), ['quiz_id' => $quizid]);
 
         // Perform security checks.
-        $quiz_id = $params['quiz_id'];
-        $context = context_module::instance($quiz_id);
+        $quizid = $params['quiz_id'];
+        $context = context_module::instance($quizid);
         self::validate_context($context);
         require_capability('mod/quiz:manage', $context);
 
-        verity_quiz::disable_verity($quiz_id);
+        verity_quiz::disable_verity($quizid);
     }
 }

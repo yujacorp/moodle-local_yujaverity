@@ -24,35 +24,38 @@
 
 namespace local_yujaverity\quiz;
 
+/**
+ * Functions relating to modifying Verity quizzes
+ */
 class verity_quiz {
     /**
      * Enables Verity for the quiz by adding a `verity_quiz` entry
-     * @param int $quiz_id Quiz ID
+     * @param int $quizid Quiz ID
      */
-    public static function enable_verity($quiz_id) {
+    public static function enable_verity($quizid) {
         global $DB;
-        $record = $DB->get_record('local_yujaverity_verityquiz', ['quiz_id' => $quiz_id]);
+        $record = $DB->get_record('local_yujaverity_verityquiz', ['quiz_id' => $quizid]);
         if (!$record) {
-            $DB->insert_record_raw('local_yujaverity_verityquiz', ['quiz_id' => $quiz_id]);
+            $DB->insert_record_raw('local_yujaverity_verityquiz', ['quiz_id' => $quizid]);
         }
     }
 
     /**
      * Disables Verity for the quiz by deleting a `verity_quiz` entry
-     * @param int $quiz_id Quiz ID
+     * @param int $quizid Quiz ID
      */
-    public static function disable_verity($quiz_id) {
+    public static function disable_verity($quizid) {
         global $DB;
-        $DB->delete_records('local_yujaverity_verityquiz', ['quiz_id' => $quiz_id]);
+        $DB->delete_records('local_yujaverity_verityquiz', ['quiz_id' => $quizid]);
     }
 
     /**
      * Checks whether Verity is enabled for the quiz
-     * @param int $quiz_id Quiz ID
+     * @param int $quizid Quiz ID
      * @return bool Whether Verity is enabled
      */
-    public static function is_verity_enabled($quiz_id) {
+    public static function is_verity_enabled($quizid) {
         global $DB;
-        return get_config("local_yujaverity", "enabled") && $DB->record_exists('local_yujaverity_verityquiz', ['quiz_id' => $quiz_id]);
+        return get_config("local_yujaverity", "enabled") && $DB->record_exists('local_yujaverity_verityquiz', ['quiz_id' => $quizid]);
     }
 }
