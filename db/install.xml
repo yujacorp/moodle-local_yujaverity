@@ -4,15 +4,7 @@
     xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
 >
   <TABLES>
-    <TABLE NAME="local_yujaverity" COMMENT="Default comment for local_yujaverity, please edit me">
-      <FIELDS>
-        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
-      </FIELDS>
-      <KEYS>
-        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
-      </KEYS>
-    </TABLE>
-    <TABLE NAME="verity_quiz" COMMENT="Stores information about Verity-enabled Moodle quizzes.">
+    <TABLE NAME="local_yujaverity_verityquiz" COMMENT="Stores information about Verity-enabled Moodle quizzes.">
       <FIELDS>
         <FIELD NAME="quiz_id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Moodle quiz ID"/>
       </FIELDS>

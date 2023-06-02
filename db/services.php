@@ -22,6 +22,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die();
+
 $functions = [
     // The name of your web service function, as discussed above.
     'local_yujaverity_create_verityquiz' => [
@@ -37,7 +39,7 @@ $functions = [
         // Whether the service is available for use in AJAX calls from the web.
         'ajax' => true,
 
-        // Require login so it can be executed on the page without a token
+        // Require login so it can be executed on the page without a token.
         'loginrequired' => true,
     ],
 

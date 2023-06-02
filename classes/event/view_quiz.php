@@ -26,17 +26,19 @@ namespace local_yujaverity\event;
 
 use local_yujaverity\quiz\verity_quiz;
 
-class view_quiz
-{
+/**
+ * Quiz view event handler
+ */
+class view_quiz {
     /**
-     * Dispatched by db/events.php
+     * Dispatched by db/events.php when a module (eg. quiz) is viewed
+     * @param Event $event module view event
      */
-    public static function course_module_viewed_handler($event)
-    {
+    public static function course_module_viewed_handler($event) {
         global $PAGE;
-        $verity_enabled = verity_quiz::is_verity_enabled($event->objectid);
+        $verityenabled = verity_quiz::is_verity_enabled($event->objectid);
 
-        if ($verity_enabled) {
+        if ($verityenabled) {
             $PAGE->add_body_class('yujaverity');
             $hostname = get_string("externalhostname", "local_yujaverity");
             $PAGE->requires->js_call_amd("local_yujaverity/checkQuizAccess", "checkQuizAccess", [$hostname]);
