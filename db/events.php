@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Event handlers for the quizaccess_yujaverity plugin.
+ * Event handlers for the local_yujaverity plugin.
  *
- * @package   quizaccess_yujaverity
+ * @package   local_yujaverity
  * @copyright Copyright (c) 2022 YuJa Inc. (https://www.yuja.com/)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 $observers = [
     [
         'eventname' => 'mod_quiz\event\course_module_viewed',
-        'callback' => 'quizaccess_yujaverity::course_module_viewed_handler',
+        'callback' => '\local_yujaverity\event\view_quiz::course_module_viewed_handler',
         'internal' => false
     ]
 ];

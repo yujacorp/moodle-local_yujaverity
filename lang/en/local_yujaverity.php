@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Implementation of the quizaccess_yujaverity plugin.
+ * Implementation of the local_yujaverity plugin.
  *
- * @package   quizaccess_yujaverity
+ * @package   local_yujaverity
  * @copyright Copyright (c) 2022 YuJa Inc. (https://www.yuja.com/)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

@@ -16,9 +16,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version metadata for the quizaccess_yujaverity plugin.
+ * Version metadata for the local_yujaverity plugin.
  *
- * @package   quizaccess_yujaverity
+ * @package   local_yujaverity
  * @copyright Copyright (c) 2022 YuJa Inc. (https://www.yuja.com/)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,6 +27,6 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->version = 2022111500;
 $plugin->requires = 2020061500;
-$plugin->component = 'quizaccess_yujaverity';
+$plugin->component = 'local_yujaverity';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = '1.0.3';

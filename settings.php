@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version metadata for the quizaccess_yujaverity plugin.
+ * Admin settings for the local_yujaverity plugin.
  *
- * @package   quizaccess_yujaverity
+ * @package   local_yujaverity
  * @copyright Copyright (c) 2022 YuJa Inc. (https://www.yuja.com/)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,10 +25,12 @@
 defined('MOODLE_INTERNAL') || die();
 
 if ($hassiteconfig) {
+    $settings = new admin_settingpage('local_yujaverity', 'YuJa Verity');
     $settings->add(new admin_setting_configcheckbox(
-        'quizaccess_yujaverity/enabled',
-        get_string('settings_enable', 'quizaccess_yujaverity'),
-        get_string('settings_enabledesc', 'quizaccess_yujaverity'),
+        'local_yujaverity/enabled',
+        get_string('settings_enable', 'local_yujaverity'),
+        get_string('settings_enabledesc', 'local_yujaverity'),
         1,
     ));
+    $ADMIN->add('localplugins', $settings);
 }
