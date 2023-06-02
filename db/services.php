@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- *  services.php description here.
+ *  Web services definition for local_yujaverity plugin
  *
  * @package    local_yujaverity
  * @copyright  2023 YuJa Inc. (https://www.yuja.com/)

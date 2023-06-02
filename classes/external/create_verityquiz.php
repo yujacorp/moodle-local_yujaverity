@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * local_yujaverity create_verityquiz.php description here.
+ * Web service for create_verityquiz for local_yujaverity plugin
  *
  * @package    local_yujaverity
  * @copyright  2023 YuJa Inc. (https://www.yuja.com/)

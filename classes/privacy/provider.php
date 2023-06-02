@@ -15,20 +15,26 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings of the local_yujaverity plugin.
+ * Privacy provider for local_yujaverity plugin
  *
- * @package   local_yujaverity
- * @copyright Copyright (c) 2022 YuJa Inc. (https://www.yuja.com/)
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package    local_yujaverity
+ * @copyright  2023 YuJa Inc. (https://www.yuja.com/)
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+namespace local_yujaverity\privacy;
 
-$string["pluginname"] = "YuJa Verity";
-
-$string['externalhostname'] = 'zone1.verity.yuja.com';
-
-$string['settings_enable'] = 'Block YuJa Verity Quizzes';
-$string['settings_enabledesc'] = 'Prevent users from accessing a YuJa Verity monitored quiz without the YuJa Verity extension';
-
-$string['privacy:metadata'] = 'This plugin only adds a quiz setting to block access to YuJa Verity enabled quizzes. It does not store any user data.';
+/**
+ * Privacy provider
+ */
+class provider implements \core_privacy\local\metadata\null_provider {
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return string string identifier
+     */
+    public static function get_reason(): string {
+        return 'privacy:metadata';
+    }
+}

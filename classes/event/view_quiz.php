@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * local_yujaverity verity_quiz.php description here.
+ * Quiz view event handler for local_yujaverity plugin
  *
  * @package    local_yujaverity
  * @copyright  2023 YuJa Inc. (https://www.yuja.com/)
