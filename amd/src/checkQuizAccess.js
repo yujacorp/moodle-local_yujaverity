@@ -110,5 +110,6 @@ export async function checkQuizAccess(verityHostname) {
             showBlockPage(verityHostname, "browser-instructions");
         }
     } catch (err) {
+        // ignore error
     }
 }
