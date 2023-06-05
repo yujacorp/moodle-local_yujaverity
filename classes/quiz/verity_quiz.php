@@ -36,7 +36,7 @@ class verity_quiz {
         global $DB;
         $record = $DB->get_record('local_yujaverity_verityquiz', ['quiz_id' => $quizid]);
         if (!$record) {
-            $DB->insert_record_raw('local_yujaverity_verityquiz', ['quiz_id' => $quizid]);
+            $DB->insert_record('local_yujaverity_verityquiz', ['quiz_id' => $quizid]);
         }
     }
 
