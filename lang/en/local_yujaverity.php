@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Implementation of the quizaccess_yujaverity plugin.
+ * Strings of the local_yujaverity plugin.
  *
- * @package   quizaccess_yujaverity
+ * @package   local_yujaverity
  * @copyright Copyright (c) 2022 YuJa Inc. (https://www.yuja.com/)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -30,3 +30,5 @@ $string['externalhostname'] = 'zone1.verity.yuja.com';
 
 $string['settings_enable'] = 'Block YuJa Verity Quizzes';
 $string['settings_enabledesc'] = 'Prevent users from accessing a YuJa Verity monitored quiz without the YuJa Verity extension';
+
+$string['privacy:metadata'] = 'This plugin only adds a quiz setting to block access to YuJa Verity enabled quizzes. It does not store any user data.';
