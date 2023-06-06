@@ -30,7 +30,7 @@ $functions = [
         // The name of the namespaced class that the function is located in.
         'classname' => 'local_yujaverity\external\create_verityquiz',
 
-        // The name of the method in the class
+        // The name of the method in the class.
         'methodname' => 'execute',
 
         // A brief, human-readable, description of the web service function.
@@ -42,7 +42,9 @@ $functions = [
         // Whether the service is available for use in AJAX calls from the web.
         'ajax' => true,
 
-        // List the capabilities required by the function (those in a require_capability() call) (missing capabilities are displayed for authorised users and also for manually created tokens in the web interface, this is just informative).
+        // List the capabilities required by the function (those in a require_capability() call)
+        // (missing capabilities are displayed for authorised users and also for manually created
+        // tokens in the web interface, this is just informative).
         'capabilities' => 'mod/quiz:manage',
 
         // Require login so it can be executed on the page without a token.

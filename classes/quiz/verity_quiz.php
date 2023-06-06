@@ -34,8 +34,7 @@ class verity_quiz {
      */
     public static function enable_verity($quizid) {
         global $DB;
-        $record = $DB->get_record('local_yujaverity_verityquiz', ['quiz_id' => $quizid]);
-        if (!$record) {
+        if (!$DB->record_exists('local_yujaverity_verityquiz', ['quiz_id' => $quizid])) {
             $DB->insert_record('local_yujaverity_verityquiz', ['quiz_id' => $quizid]);
         }
     }

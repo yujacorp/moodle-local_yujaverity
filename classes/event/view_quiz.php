@@ -36,7 +36,7 @@ class view_quiz {
      */
     public static function course_module_viewed_handler($event) {
         global $PAGE;
-        $verityenabled = verity_quiz::is_verity_enabled($event->objectid);
+        $verityenabled = verity_quiz::is_verity_enabled($event->contextinstanceid);
 
         if ($verityenabled) {
             $PAGE->add_body_class('yujaverity');
